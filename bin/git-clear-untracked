@@ -1,0 +1,6 @@
+#!/bin/bash
+
+for file in $(git status --porcelain | grep '??' | awk '{print $2}') ; do
+  echo 'deleting: ' $file;
+  rm -rf $file;
+done

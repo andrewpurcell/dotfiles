@@ -12,7 +12,8 @@ if command -v most > /dev/null 2>&1; then
   alias man='man -P most'
 fi
 
-export PATH=$HOME/.dotfiles/bin:./node_modules/.bin:$PATH
+
+export PATH=$HOME/.dotfiles/bin:$HOME/dotfiles/bin:./node_modules/.bin:$PATH
 
 alias g='git'
 alias gn='git --no-pager'
