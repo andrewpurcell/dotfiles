@@ -27,22 +27,22 @@ alias xg='xargs grep'
 alias ffg='find . -type f -print0 | xargs -0 grep'
 
 ff() {
-  dir="$1"
+  local dir="$1"
   [[ -z $dir ]] && dir="."
   find $dir -type f | grep -v .git
 }
 
 github() {
-  USER="$1"
-  REPO="$2"
-  DIR="$3"
+  local user="$1"
+  local repo="$2"
+  local dir="$3"
 
   if (($# < 2)); then
     echo "Usage: github USER REPO [dirname]"
     return
   fi
 
-  git clone git@github.com:${USER}/${REPO}.git $DIR
+  git clone git@github.com:${user}/${repo}.git $dir
 }
 
 gls() {
@@ -56,7 +56,7 @@ gls() {
 }
 
 stopwatch() {
-  date1=`date +%s`;
+  local date1=`date +%s`;
   while true; do
     echo -ne "$(date -u --date @$((`date +%s` - $date1)) +%H:%M:%S)\r";
   done
