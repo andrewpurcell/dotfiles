@@ -9,7 +9,6 @@
   di = diff
   dc = diff --cached
   ff = merge --ff-only
-  fa = fetch --all
   g = grep
   pom = push origin master
   b = branch --format='%(HEAD) %(if)%(HEAD)%(then)%(color:green)%(end)%(refname:lstrip=2) (%(authordate:relative))'
@@ -17,6 +16,10 @@
   dh1 = diff HEAD~1
   rom = reset --hard origin/master
   mom = merge origin/master
+  rbc = rebase --continue
+  rba = rebase --abort
+  rbo = rebase origin/master
+  swd = log --date=short --pretty='format:Author: %aN <%aE>%n%n%s, %ad%n'
 
   upstream-reset = reset HEAD@{upstream}
 [push]
