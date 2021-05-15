@@ -3,6 +3,10 @@ filetype off
 
 set rtp+=~/.vim/bundle/Vundle.vim
 set rtp+=~/.fzf
+
+" TO INSTALL ON A NEW MACHINE
+" - Install Vundle: git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
+" - Open vim and run :PluginInstall
 call vundle#begin()
 Plugin 'tpope/vim-unimpaired'
 Plugin 'tpope/vim-fugitive'
